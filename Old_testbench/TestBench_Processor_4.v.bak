@@ -1,0 +1,138 @@
+
+module TestBench_Processor_4(output reg ignoreThis);
+	//Instruction, PC_Plus4
+	
+	reg [31:0] Instruction;
+	reg [31:0] PC_Plus4;
+	reg [31:0] Result;
+	
+	/*
+	reg Memto_Reg;	
+	reg Mem_Write;
+	reg BranchEq;
+	reg BranchNE;
+	reg [2:0] ALU_Control;
+	reg ALU_Src;
+	reg Reg_Dst;//////////////////////////////////
+	reg Reg_Write;////////////////////////////////
+	reg Jump;
+	reg Zero_Extend;*/
+	//reg [4:0] WriteReg;
+	
+	wire [5:0] Instr_Op_Code;	//Instruction[31:26]
+	wire [4:0] Instr_A1_Adr;	//Instruction[25:21]
+	wire [4:0] Instr_A2_Adr;	//Instruction[20:16]
+	wire [4:0] Instr_A3_Adr;	//Instruction[15:11]
+	wire [5:0] Instr_Funct_Code; //Instruction[5:0]
+	wire [15:0] Instr_Imm_Value; //Instruction[15:0]
+	wire [25:0] Instr_Jump_Imm; //Instruction[25:0]
+	
+	/*
+	Instr_Op_Code, Instr_A1_Adr, Instr_A2_Adr, Instr_A3_Adr, Instr_Funct_Code, Instr_Imm_Value, Instr_Jump_Imm
+	*/
+	
+	//wire [31:0] RD1;
+	//wire [31:0] RD2;
+	
+	wire [31:0] SignImm;
+	//wire [31:0] Shifted_2;
+	wire [31:0] PC_Branch;
+	//wire [31:0] ScrB;
+	wire [31:0] ALU_Result;
+	wire ALU_Zero;
+	/*wire PC_Scr;
+	wire [31:0] ReadData;
+	wire [31:0] Result;
+	*/
+	wire Memto_Reg;
+	wire Mem_Write;
+	wire BranchEq;
+	wire BranchNE;
+	wire [2:0] ALU_Control;
+	wire ALU_Src;
+	wire Reg_Dst;
+	wire Reg_Write;
+	wire Jump;
+	wire Zero_Extend;
+	
+	//wire [31:0] Out;
+	
+	//reg [31:0] expectedOut;
+	
+	reg [95:0] testVectors[31:0];
+	reg [4:0] vectorNum;
+	reg clk;
+	
+	//CLA_32(input [31:0] A, input [31:0] B, input Cin, output [31:0] F, output Coutput);
+	//CLA_32 DUT(operandA, operandB, carryIn, result, carryOut);
+	//Program_Counter DUT(clk1, In, result);
+	//Instruction_Memory DUT(RegAddress, result);
+	//Register_File DUT(clk1, WE3, A1, A2, A3, WD3, RD1, RD2);
+	//Data_Memory DUT(clk1, WE, A, WD, RD);	//input WE, input [31:0] A, input [31:0] WD, output reg [31:0] RD
+	//Sign_Extend DUT(Zero_Extend, In, Out);	//input Zero_Extend, input [15:0] In, output [31:0] Out
+	//Shift32_Left_2 DUT(In, Out);	//input [31:0] In, output [31:0] Out
+	//Jump_Shift DUT(Adr, Adr_Rmdr, Out);	//input [25:0] Adr, input [3:0] Adr_Rmdr, output [31:0] Out
+	CS3421_RRK_Processor DUT(clk, Instruction, PC_Plus4, Result, 
+	Memto_Reg, Mem_Write, BranchEq, BranchNE, ALU_Control, ALU_Src, Reg_Dst, Reg_Write, Jump, Zero_Extend, 
+	Instr_Op_Code, Instr_A1_Adr, Instr_A2_Adr, Instr_A3_Adr, Instr_Funct_Code, Instr_Imm_Value, Instr_Jump_Imm, 
+	SignImm, PC_Branch, ALU_Result, ALU_Zero);
+	
+	/*
+	, WriteReg, RD1, RD2, SignImm, Shifted_2, PC_Branch, ScrB, ALU_Result, ALU_Zero, PC_Scr, ReadData, 
+									Result, 
+									Memto_Reg, 
+									Mem_Write, 
+									BranchEq, 
+									BranchNE, 
+									ALU_Control, 
+									ALU_Src, 
+									Reg_Dst, 
+									Reg_Write, 
+									Jump, 
+									Zero_Extend);*/
+	
+	
+	initial	// read in data
+	begin
+		//$readmemb("tier1test.out", testVectors);
+		$readmemb("testvector_Processor_3.txt", testVectors);
+		
+		//PC_Plus4 = 32'd0;
+		
+		vectorNum = 5'd0;
+		ignoreThis = 1'b0;
+	end
+	
+	always	// clock
+	begin
+		clk = 1'b1;
+		#30;
+		clk = 1'b0;
+		#30;
+	end
+	
+	always @ (posedge clk)	// put inputs into module
+	begin
+		#1;
+		{Instruction, PC_Plus4, Result} = testVectors[vectorNum];
+	end
+	
+	always@(negedge clk)	// compare module output to expected output
+	begin
+		ignoreThis = 1'b0;
+		if ((Result !== Result))
+		begin
+			ignoreThis = 1'b1;	//error
+		end
+		
+		
+		//PC_Plus4 = PC_Plus4 + 32'd4;	////////////////////////////////<------------TEMP///////////////
+		vectorNum = vectorNum + 5'd1;
+		if (vectorNum == 5'd31)
+		begin
+			#20;
+			$finish;
+		end
+	end
+	
+endmodule

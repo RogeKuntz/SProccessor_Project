@@ -1,0 +1,418 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/simulation/modelsim
+vadder32
+Z1 !s110 1544726941
+!i10b 1
+!s100 4=050Kdh^@O?lF=9CCORY2
+IkXbD`O^5aHi1XVFX`@hkR0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1544722759
+Z4 8D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/CS3421_RRK_Processor.v
+Z5 FD:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/CS3421_RRK_Processor.v
+L0 534
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1544726941.000000
+Z8 !s107 D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/CS3421_RRK_Processor.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project|D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/CS3421_RRK_Processor.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work {+incdir+D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project}
+Z12 tCvgOpt 0
+vadder4
+R1
+!i10b 1
+!s100 9;EWfmKac56NBUh>EI^z?1
+IJ[ZG91HaSN3fN]=1k4kg20
+R2
+R0
+R3
+R4
+R5
+L0 549
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vALU
+R1
+!i10b 1
+!s100 VoKc6Ama<GM]N6]GXXO2U3
+I;aQoA?jR23COQP5EK:eTg3
+R2
+R0
+R3
+R4
+R5
+L0 454
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@a@l@u
+vControl_Unit
+R1
+!i10b 1
+!s100 AYV^Eg@EN]oWSz`JJka7]1
+Iz3hVz^69mj?NoXj3=@:TM2
+R2
+R0
+R3
+R4
+R5
+L0 209
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@control_@unit
+vCS3421_RRK_Processor
+R1
+!i10b 1
+!s100 4ZJeRX>Q>a8ok32<9ZIhK3
+IHYLQ:@zWBMOJ43@G89Fzf1
+R2
+R0
+R3
+R4
+R5
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@c@s3421_@r@r@k_@processor
+vData_Memory
+R1
+!i10b 1
+!s100 z7`Hd[?3L_?EgAO7@fXM]1
+I[zI^Emi8mR[YF4c6]AY@J1
+R2
+R0
+R3
+R4
+R5
+L0 188
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@data_@memory
+vDataClock
+R1
+!i10b 1
+!s100 O8IVVmlEinU;RSGFIcaoJ2
+I8fIPnBlIEMo`?7zCU][:F3
+R2
+R0
+R3
+R4
+R5
+L0 437
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@data@clock
+vequalToZero
+R1
+!i10b 1
+!s100 `odbe2LLAXiD2QMll=n3z0
+IX3@CGMVOahdYZF7Z>b_:J0
+R2
+R0
+R3
+R4
+R5
+L0 483
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nequal@to@zero
+vInstruction_Memory
+R1
+!i10b 1
+!s100 AMZD;f0i`W64D5EVKjl^d1
+In4BnT`X7Iej7A^Q3LC;jo2
+R2
+R0
+R3
+R4
+R5
+L0 148
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@instruction_@memory
+vJump_Shift
+R1
+!i10b 1
+!s100 CGZS3AmMj4e38fh@lQcO42
+IfVGWVXOR<WY5@[75081nE1
+R2
+R0
+R3
+R4
+R5
+L0 419
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@jump_@shift
+vmux2to1
+R1
+!i10b 1
+!s100 `?Dm31EMBP[jam8GPc`UH1
+I5N2Ij53JNBcU4J<NMT?053
+R2
+R0
+R3
+R4
+R5
+L0 499
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vmux2to1_5
+R1
+!i10b 1
+!s100 oCJd?ze6O<FIdN7QGcROj2
+I7B[EJQT^XKGnJhb:<L8_N0
+R2
+R0
+R3
+R4
+R5
+L0 425
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vmux4to1
+R1
+!i10b 1
+!s100 kY^[1dCHh[14OaYWI37OK1
+I:773zkM;K41F<VJW`_Dff2
+R2
+R0
+R3
+R4
+R5
+L0 518
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+vProgram_Counter
+R1
+!i10b 1
+!s100 h;OjLW48;IM^zeE:PmDSI3
+IZQQ_5i1WLzioQ74H;O_:I1
+R2
+R0
+R3
+R4
+R5
+L0 136
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@program_@counter
+vRegister_File
+R1
+!i10b 1
+!s100 4h;TK=aajLS5;NLKFQTT;0
+Iai@ZkVGmAA6ZOhc3E=AL91
+R2
+R0
+R3
+R4
+R5
+L0 161
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@register_@file
+vSign_Extend
+R1
+!i10b 1
+!s100 j<W4:WGQ?^VL9CU]_W9NN0
+Ib]GHo7lzY@_No<N9HY>bh0
+R2
+R0
+R3
+R4
+R5
+L0 400
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+n@sign_@extend
+vTestBench_Processor_Final
+!s110 1544726954
+!i10b 1
+!s100 Lo26RjIWkAbIkZJW;d<O;0
+I28JO<L@icAgZ:aE]Q9S:K0
+R2
+R0
+w1544726607
+8D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/TestBench_Processor_Final.v
+FD:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/TestBench_Processor_Final.v
+L0 12
+R6
+r1
+!s85 0
+31
+!s108 1544726954.000000
+!s107 D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/TestBench_Processor_Final.v|
+!s90 -reportprogress|300|-work|work|D:/School/College_Year3_Semester1/CS3421 - R01 - ComputerOrganization/Processor_Project/TestBench_Processor_Final.v|
+!i113 1
+o-work work
+R12
+n@test@bench_@processor_@final
+vzeroExtender
+R1
+!i10b 1
+!s100 Iadh9J^@T3?;RKk5Ko;3X2
+ISkX:[8CQ:IY;6^OhS`?=[2
+R2
+R0
+R3
+R4
+R5
+L0 564
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+nzero@extender

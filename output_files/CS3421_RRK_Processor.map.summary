@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Dec 13 13:46:58 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : CS3421_RRK_Processor
+Top-level Entity Name : CS3421_RRK_Processor
+Family : Cyclone IV E
+Total logic elements : 381
+    Total combinational functions : 381
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 99
+Total virtual pins : 0
+Total memory bits : 34,816
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

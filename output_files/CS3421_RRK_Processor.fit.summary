@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Dec 13 13:47:27 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : CS3421_RRK_Processor
+Top-level Entity Name : CS3421_RRK_Processor
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 381 / 114,480 ( < 1 % )
+    Total combinational functions : 381 / 114,480 ( < 1 % )
+    Dedicated logic registers : 32 / 114,480 ( < 1 % )
+Total registers : 32
+Total pins : 99 / 529 ( 19 % )
+Total virtual pins : 0
+Total memory bits : 34,816 / 3,981,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

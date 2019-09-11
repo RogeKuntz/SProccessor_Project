@@ -1,0 +1,20 @@
+// # Tier 1 Test file
+// # Updated 12/11 so that the branch actually branches
+// # Fixed AGAIN so it doesn't branch eternally.
+// # Add the following to the initial block of your data memory:
+// # dataMemory[6] <= 32'd42;
+// # And be sure that reg 0 = 0
+//  lw $1, 6($0)
+8c010006
+//  add $2, $1, $1
+00211020
+//  sub $3, $2, $1
+00411822
+// # This branch should execute once
+//  beq $1, $1, 1
+10210001
+// # Useless instruction that gets skipped
+//  sub $3, $3, $3
+00631822
+//  sw $2, 7($0)
+ac020007
